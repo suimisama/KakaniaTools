@@ -6,8 +6,6 @@ function useSoftScroll(distance = 10) {
   function resize_body() {
     let height = ref.current.offsetHeight;
     document.body.style.height = `${height}px`;
-    console.log(document.body);
-    console.log(ref.current.offsetHeight);
   }
   function handleScroll() {
     ref.current.style.transform = `translateY(${-window.scrollY}px)`;
