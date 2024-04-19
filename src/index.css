@@ -26,7 +26,8 @@
   align-items: center;
   width: 100%;
   flex-shrink: 0;
-  transition: 0.15s;
+  transition: 0.3s ease-out;
+  scroll-snap-type: y mandatory;
 }
 .view-box {
   position: fixed;
@@ -38,6 +39,9 @@
 }
 .text {
   color: hsl(11, 2%, 99%);
+}
+.sticky {
+  position: sticky;
 }
 .logo {
   font-size: 24px;

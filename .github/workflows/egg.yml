@@ -1,0 +1,20 @@
+name: '打包项目'
+on: push
+
+jobs:
+  npm-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: '读取仓库内容'
+        uses: actions/checkout@v4
+
+      - name: '安装依赖 | 项目打包'
+        run: |
+          npm install
+          npm run build
+
+      - name: '部署'
+        uses: JamesIves/github-pages-deploy-action@4
+        with:
+          branch: gh-pages
+          folder: build
